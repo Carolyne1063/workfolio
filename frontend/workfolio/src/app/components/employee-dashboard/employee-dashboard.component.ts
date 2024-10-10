@@ -6,11 +6,12 @@ import { MyLeavesComponent } from './my-leaves/my-leaves.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AttendanceComponent } from './attendance/attendance.component';
 import { CommonModule } from '@angular/common';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @Component({
   selector: 'app-employee-dashboard',
   standalone: true,
-  imports: [CommonModule, SidebarComponent, MyProjectsComponent, MyLeavesComponent, DashboardComponent, AttendanceComponent],
+  imports: [CommonModule, NavbarComponent, SidebarComponent, MyProjectsComponent, MyLeavesComponent, DashboardComponent, AttendanceComponent],
   templateUrl: './employee-dashboard.component.html',
   styleUrl: './employee-dashboard.component.css'
 })

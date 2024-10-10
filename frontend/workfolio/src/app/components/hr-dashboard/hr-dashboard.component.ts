@@ -7,11 +7,12 @@ import { LeadersComponent } from './leaders/leaders.component';
 import { AttendanceComponent } from './attendance/attendance.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CommonModule } from '@angular/common';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @Component({
   selector: 'app-hr-dashboard',
   standalone: true,
-  imports: [CommonModule, SidebarComponent, ProjectsComponent, LeaveManagementComponent, EmployeesComponent, LeadersComponent, AttendanceComponent, DashboardComponent],
+  imports: [CommonModule, NavbarComponent, SidebarComponent, ProjectsComponent, LeaveManagementComponent, EmployeesComponent, LeadersComponent, AttendanceComponent, DashboardComponent],
   templateUrl: './hr-dashboard.component.html',
   styleUrl: './hr-dashboard.component.css'
 })
