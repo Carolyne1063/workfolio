@@ -1,0 +1,11 @@
+<main>
+    <app-sidebar (selectSection)="onSectionSelected($event)"></app-sidebar>
+    <div class="content-container">
+        <app-dashboard *ngIf="selectedSection === 'dashboard'"></app-dashboard>
+        <app-attendance *ngIf="selectedSection === 'attendance'"></app-attendance>
+        <app-employees *ngIf="selectedSection === 'employees'"></app-employees>
+        <app-projects *ngIf="selectedSection === 'projects'"></app-projects>
+        <app-leave-management *ngIf="selectedSection === 'leaves'"></app-leave-management>
+        <app-leaders *ngIf="selectedSection === 'leaders'"></app-leaders>
+    </div>
+</main>
