@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.employeesContainer{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.addEmployeeBtn {
+    padding: 12px;
+    font-size: 12px;
+    font-weight: 300;
+    color: white;
+    background-color: #FF6500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 750px;
+}
+.addEmployeeBtn i{
+    padding-right: 7px;
+}
+.filter{
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.filter input{
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+
+}
+.filter button{
+    background-color: #73EC8B;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.employeeCard {
+    width: 200px;
+    height: 150px;
+    display: flex;
+    gap: 50px;
+    padding: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+.employeeCard:hover {
+    transform: translateY(-10px);
+}
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-left: 50px;
+
+}
+.details img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.moreDetails button{
+    border: none;
+}

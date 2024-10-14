@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.leaveStats{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.statCard{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 150px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.statCard:hover {
+    background-color: #ffe2c4;
+}
+.statCard p{
+    font-size: 20px;
+    font-weight: 300;
+}
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 20px;
+    text-align: left;
+}
+
+th {
+    background-color: #FF6500;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 14px;
+    text-align: center;
+}
+
+td {
+    color: #333;
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #ffe2c4;
+}
+
+td.status-approved {
+    color: green;
+    font-weight: bold;
+}
+
+td.status-declined {
+    color: red;
+    font-weight: bold;
+}
+
+td.status-pending {
+    color: blue;
+    font-weight: bold;
+}
+
+td, th {
+    text-align: center;
+}
