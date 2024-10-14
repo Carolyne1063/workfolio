@@ -3,6 +3,7 @@
     padding: 0;
 }
 main{
+    overflow-x: hidden;
     padding: 20px;
 }
 .statistics {
@@ -49,3 +50,144 @@ main{
     justify-content: center;
 
 }
+.projectEmployeesStats{
+    display: flex;
+    gap: 20px;
+}
+.task-statistics {
+    background-color: white;
+    width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-statistics h1 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.statistics-overview {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.statistics-overview div {
+    text-align: center;
+}
+
+.statistics-overview div h3 {
+    font-size: 1.8em;
+    margin: 5px 0;
+}
+
+.progress-bars {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 18%;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.progress-bar.completed { background-color: #8E7CFD; }
+.progress-bar.inprogress { background-color: #F7C157; }
+.progress-bar.onhold { background-color: #58CC7C; }
+.progress-bar.pending { background-color: #ED5C5A; }
+.progress-bar.review { background-color: #1DA5E1; }
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.task-list li .circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.circle.completed { background-color: #8E7CFD; }
+.circle.inprogress { background-color: #F7C157; }
+.circle.onhold { background-color: #58CC7C; }
+.circle.pending { background-color: #ED5C5A; }
+.circle.review { background-color: #1DA5E1; }
+
+.task-label {
+    display: flex;
+    align-items: center;
+}
+
+.attendance-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 500px;
+}
+
+.attendance-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.attendance-stat .circle {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.circle::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#7d5bbe calc(var(--percent) * 1%), #ddd calc(var(--percent) * 1%));
+}
+
+.circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.attendance-stat p {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.attendance-stat .total {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Colors for each circle */
+.present .circle::before { background: conic-gradient(#7d5bbe 79%, #ddd 79%); }
+.on-duty .circle::before { background: conic-gradient(#74d1d6 3.8%, #ddd 3.8%); }
+.paid-leave .circle::before { background: conic-gradient(#f97e72 9.4%, #ddd 9.4%); }
+.absent .circle::before { background: conic-gradient(#f4a895 1.9%, #ddd 1.9%); }
+.holiday-leave .circle::before { background: conic-gradient(#5de594 5.7%, #ddd 5.7%); }
+.weekend .circle::before { background: conic-gradient(#bcb2f1 0%, #ddd 0%); }
