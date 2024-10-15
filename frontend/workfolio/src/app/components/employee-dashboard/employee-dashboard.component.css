@@ -6,3 +6,6 @@
     display: flex;
     gap: 20px;
 }
+.content-container{
+    padding: 20px;
+}

@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.statistics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+    gap: 30px;
+  }
+
+  .statCard {
+    width: 150px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Present - Green */
+  #present {
+    background-color: #28a745; /* Bootstrap green */
+  }
+
+  /* Absent - Red */
+  #absent {
+    background-color: #dc3545; /* Bootstrap red */
+  }
+
+  /* Remaining - Blue */
+  #rem {
+    background-color: #007bff; /* Bootstrap blue */
+  }
+
+  .statCard p:first-child {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .statCard p:last-child {
+    font-size: 1rem;
+    margin: 5px 0 0;
+  }
+
+  .statCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-left: 100px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Table header styling */
+th {
+    background-color: #FF6500;
+    color: white;
+    text-align: left;
+    padding: 12px;
+}
+
+/* Table row and cell styling */
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Row hover effect */
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Even row styling for readability */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Status column styling for present and absent */
+.status-present {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.status-absent {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    td, th {
+        padding: 8px;
+    }
+}
