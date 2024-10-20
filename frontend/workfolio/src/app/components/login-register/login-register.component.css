@@ -1,0 +1,91 @@
+/* General Layout */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .form-container {
+    width: 400px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-box {
+    display: none;
+    animation: fadeIn 0.5s;
+  }
+  
+  .form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF6500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #FF6500;
+  }
+  
+  .toggle-text {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .toggle-text a {
+    color: #6200ea;
+    text-decoration: none;
+  }
+  
+  .toggle-text a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Toggle Logic */
+  .login-mode .login-form,
+  .register-mode .register-form {
+    display: block;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
