@@ -1,1 +1,32 @@
-<p>assign-project works!</p>
+<div class="assign-project-container">
+    <h2>Assign Project to Employee</h2>
+    <form (ngSubmit)="assignProject()" #projectAssignmentForm="ngForm">
+        <div class="form-group">
+            <label for="employee">Select Employee:</label>
+            <select id="employee" name="employee" [(ngModel)]="selectedEmployee" required>
+                <option value="" disabled>Select an employee</option>
+                <option *ngFor="let employee of employees" [value]="employee.id">{{ employee.name }}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="project">Select Project:</label>
+            <select id="project" name="project" [(ngModel)]="selectedProject" required>
+                <option value="" disabled>Select a project</option>
+                <option *ngFor="let project of projects" [value]="project.id">{{ project.title }}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="deadline">Deadline:</label>
+            <input type="date" id="deadline" name="deadline" [(ngModel)]="projectDeadline" required />
+        </div>
+
+        <div class="form-group">
+            <label for="description">Project Description:</label>
+            <textarea id="description" name="description" [(ngModel)]="projectDescription" rows="4" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">Assign Project</button>
+    </form>
+</div>
