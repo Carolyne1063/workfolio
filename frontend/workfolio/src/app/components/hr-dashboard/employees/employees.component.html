@@ -37,65 +37,31 @@
     </form>
   </div>
 </div>
+
 <div class="filter">
   <input type="text" value="Employee Name">
   <input type="text" value="Employee ID">
   <input type="text" value="Select Designation">
   <button>Search</button>
 </div>
+
 <div class="employeesContainer">
-  <div class="employeeCard">
+  <div class="employeeCard" *ngFor="let employee of employees">
     <div class="details">
-      <img src="assets/p1.jpg" alt="employeeImage1">
-      <p>Web Developer</p>
+      <img [src]="employee.image" alt="employeeImage">
+      <p>{{ employee.position }}</p>
     </div>
     <div class="moreDetails">
-      <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
-    </div>
-  </div>
-  <div class="employeeCard">
-    <div class="details">
-      <img src="assets/p2.jpg" alt="employeeImage2">
-      <p>UI/UX Designer</p>
-    </div>
-    <div class="moreDetails">
-      <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
-    </div>
-  </div>
-  <div class="employeeCard">
-    <div class="details">
-      <img src="assets/p3.jpg" alt="employeeImage3">
-      <p>Mobile Developer</p>
-    </div>
-    <div class="moreDetails">
-      <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
-    </div>
-  </div>
-  <div class="employeeCard">
-    <div class="details">
-      <img src="assets/p4.jpg" alt="employeeImage4">
-      <p>Web Designer</p>
-    </div>
-    <div class="moreDetails">
-      <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
-    </div>
-  </div>
-  <div class="employeeCard">
-    <div class="details">
-      <img src="assets/p5.jpg" alt="employeeImage5">
-      <p>QA Expert</p>
-    </div>
-    <div class="moreDetails">
-      <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
-    </div>
-  </div>
-  <div class="employeeCard">
-    <div class="details">
-      <img src="assets/p6.jpg" alt="employeeImage6">
-      <p>Networking Master</p>
-    </div>
-    <div class="moreDetails">
-      <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+      <button (click)="toggleOptions(employee.id)">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+      </button>
+      <div *ngIf="isOptionsVisible(employee.id)" class="options-dropdown">
+        <ul>
+          <li (click)="viewProfile(employee.id)">View Profile</li>
+          <li (click)="assignProject(employee.id)">Assign Project</li>
+          <li (click)="viewProjects(employee.id)">View Projects</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
