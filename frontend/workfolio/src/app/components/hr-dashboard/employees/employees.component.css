@@ -147,7 +147,7 @@
 }
 .employeeCard {
     width: 200px;
-    height: 150px;
+    height: 180px;
     display: flex;
     gap: 50px;
     padding: 12px;
@@ -203,5 +203,14 @@
   
   .options-dropdown li:hover {
     background-color: #f0f0f0;
+  }
+  .backButton{
+    border: none;
+    font-size: 25px;
+    color: #FF6500;
+    padding: 10px;
+    display: flex;
+    justify-self: end;
+    background-color: white;
   }
   
