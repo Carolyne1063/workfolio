@@ -24,6 +24,105 @@
 .addEmployeeBtn i{
     padding-right: 7px;
 }
+.form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Dark, semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; 
+    z-index: 1000; 
+    padding: 1rem; /* Ensures it appears on top */
+  }
+  
+  /* Centered form styling */
+  .form-container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh; /* Prevents form from being larger than the viewport */
+    overflow-y: auto; 
+    z-index: 1001; /* Keeps form above overlay */
+  }
+
+  .form-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FF6500;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative; /* Ensure this container is the reference for absolute positioning */
+}
+
+.close-button {
+    position: absolute; /* Absolute positioning */
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Positioning it to the right */
+    background: #FF6500;
+    border: none;
+    border-radius: 50%; /* Circle shape */
+    width: 30px; /* Width of the button */
+    height: 30px; /* Height of the button */
+    color: white; /* Text color */
+    font-size: 1.2rem; /* Font size for the icon */
+    display: flex; /* Flexbox for centering the icon */
+    justify-content: center; /* Centering horizontally */
+    align-items: center; /* Centering vertically */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adding a shadow for depth */
+}
+
+.close-button:hover {
+    background-color: #e55a00; /* Darker shade on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF6500;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .form-button:hover {
+    background-color: #e55a00;
+  }
 .filter{
     padding: 12px;
     display: flex;
