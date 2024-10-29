@@ -63,21 +63,20 @@ tr:nth-child(even) {
 tr:hover {
     background-color: #ffe2c4;
 }
-
-td.status-approved {
+.status-approved {
     color: green;
     font-weight: bold;
-}
-
-td.status-declined {
+  }
+  
+  .status-declined {
     color: red;
     font-weight: bold;
-}
-
-td.status-pending {
-    color: blue;
+  }
+  
+  .status-pending {
+    color: orange;
     font-weight: bold;
-}
+  }
 
 td, th {
     text-align: center;

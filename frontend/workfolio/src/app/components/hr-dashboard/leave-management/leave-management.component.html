@@ -14,6 +14,7 @@
         <p>Pending</p>
     </div>
 </div>
+
 <table>
     <tr>
         <th>Employee Name</th>
@@ -24,31 +25,19 @@
         <th>Reason</th>
         <th>Status</th>
     </tr>
-    <tr>
-        <td>John Doe</td>
-        <td>Medical Leave</td>
-        <td>26th Aug 2024</td>
-        <td>1st Sept 2024</td>
-        <td>7 Days</td>
-        <td>Sick</td>
-        <td class="status-approved">Approved</td>
-    </tr>
-    <tr>
-        <td>Jane Doe</td>
-        <td>Medical Leave</td>
-        <td>26th Aug 2024</td>
-        <td>1st Sept 2024</td>
-        <td>7 Days</td>
-        <td>Sick</td>
-        <td class="status-declined">Declined</td>
-    </tr>
-    <tr>
-        <td>Sarah Smith</td>
-        <td>Medical Leave</td>
-        <td>26th Aug 2024</td>
-        <td>1st Sept 2024</td>
-        <td>7 Days</td>
-        <td>Sick</td>
-        <td class="status-pending">Pending</td>
+    <tr *ngFor="let leave of leaves">
+        <td>{{ leave.employeeName }}</td>
+        <td>{{ leave.leaveType }}</td>
+        <td>{{ leave.from | date: 'd MMM yyyy' }}</td>
+        <td>{{ leave.to | date: 'd MMM yyyy' }}</td>
+        <td>{{ leave.noOfDays }} Days</td>
+        <td>{{ leave.reason }}</td>
+        <td>
+            <select [(ngModel)]="leave.status" [ngClass]="{'status-approved': leave.status === 'Approved', 'status-declined': leave.status === 'Declined', 'status-pending': leave.status === 'Pending'}">
+                <option value="Approved">Approved</option>
+                <option value="Declined">Declined</option>
+                <option value="Pending">Pending</option>
+            </select>
+        </td>
     </tr>
 </table>
