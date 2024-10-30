@@ -18,7 +18,6 @@ main{
     gap: 50px;
     padding: 20px;
     flex-wrap: wrap;
-    /* background-color: #7d5bbe; */
 }
 .statCard {
     width: 200px;
@@ -65,7 +64,6 @@ main{
     gap: 20px;
     width: 100%;
     max-width: 100vw;
-    /* background-color: #1DA5E1; */
 }
 .task-statistics {
     background-color: white;
@@ -197,7 +195,7 @@ main{
     color: gray;
 }
 
-/* Colors for each circle */
+
 .present .circle::before { background: conic-gradient(#7d5bbe 79%, #ddd 79%); }
 .on-duty .circle::before { background: conic-gradient(#74d1d6 3.8%, #ddd 3.8%); }
 .paid-leave .circle::before { background: conic-gradient(#f97e72 9.4%, #ddd 9.4%); }

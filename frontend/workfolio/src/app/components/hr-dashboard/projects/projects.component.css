@@ -44,7 +44,6 @@
     z-index: 1000;
   }
   
-  /* Project form styling */
   .project-form-container {
     background-color: #fff;
     padding: 20px;
@@ -56,7 +55,7 @@
     position: relative;
   }
   
-  /* Form input styling */
+ 
   .form-group {
     margin-bottom: 15px;
   }
@@ -74,8 +73,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
   }
-  
-  /* Submit button */
+
   .submit-button {
     background-color: #FF6500;
     color: #fff;

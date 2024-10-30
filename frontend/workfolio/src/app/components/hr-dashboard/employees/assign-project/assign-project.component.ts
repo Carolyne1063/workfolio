@@ -28,13 +28,12 @@ export class AssignProjectComponent {
   ];
 
   assignProject() {
-    // Handle the project assignment logic here
     console.log('Project assigned:', {
       employeeId: this.selectedEmployee,
       projectId: this.selectedProject,
       deadline: this.projectDeadline,
       description: this.projectDescription,
     });
-    // You can also reset the form or show a success message here
+
   }
 }

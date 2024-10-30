@@ -43,7 +43,7 @@ export class ViewProfileComponent {
     }
   };
 
-  // Edit states for different sections
+  
   isEditing: Record<string, boolean> = {
     basicInfo: false,
     bankInfo: false,
@@ -56,9 +56,9 @@ export class ViewProfileComponent {
   }
 
   saveChanges() {
-    // Handle save logic
+   
     console.log('User details saved:', this.user);
-    // Exit edit mode for all sections after saving
+   
     Object.keys(this.isEditing).forEach((key) => {
       this.isEditing[key as keyof typeof this.isEditing] = false;
     });

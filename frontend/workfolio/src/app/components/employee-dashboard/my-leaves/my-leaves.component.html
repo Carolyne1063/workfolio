@@ -3,7 +3,7 @@
 <button (click)="toggleForm()">Apply for Leave</button>
 
 <div class="leave-application-overlay" *ngIf="showForm">
-  <div class="leave-application-form">
+  <div class="leave-application-form"><br><br>
     <button class="close-button" (click)="toggleForm()">✕</button>
     <h2>Leave Application Form</h2>
     <form [formGroup]="leaveForm" (ngSubmit)="onSubmit()">

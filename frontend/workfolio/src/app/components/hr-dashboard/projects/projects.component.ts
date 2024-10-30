@@ -12,7 +12,7 @@ import { FormGroup, FormBuilder, Validators, FormsModule, ReactiveFormsModule } 
 export class ProjectsComponent {
   projectForm: FormGroup;
   isFormVisible = false;
-  assignablePeople = ['Person 1', 'Person 2', 'Person 3']; // Replace with actual data source
+  assignablePeople = ['Person 1', 'Person 2', 'Person 3']; 
 
   constructor(private fb: FormBuilder) {
     this.projectForm = this.fb.group({
@@ -25,7 +25,7 @@ export class ProjectsComponent {
 
   toggleFormVisibility(): void {
     this.isFormVisible = !this.isFormVisible;
-    console.log('Form visibility:', this.isFormVisible); // Check if toggling
+    console.log('Form visibility:', this.isFormVisible); 
 
   }
 
@@ -33,7 +33,7 @@ export class ProjectsComponent {
     if (this.projectForm.valid) {
       const projectData = this.projectForm.value;
       console.log('Project added:', projectData);
-      // Add logic to save the project data
+      
     }
   }
 }

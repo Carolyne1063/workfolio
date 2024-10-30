@@ -13,7 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 export class LoginRegisterComponent {
   loginForm: FormGroup;
   registerForm: FormGroup;
-  isLoginMode = true; // This will toggle between login and register forms
+  isLoginMode = true;
 
   constructor(private fb: FormBuilder) {
     this.loginForm = this.fb.group({
@@ -31,21 +31,21 @@ export class LoginRegisterComponent {
 
   onLogin() {
     if (this.loginForm.valid) {
-      // Handle login
+
       console.log('Login successful!');
     }
   }
 
   onRegister() {
     if (this.registerForm.valid) {
-      // Handle registration
+
       console.log('Registration successful!');
     }
   }
 
   toggleMode() {
     this.isLoginMode = !this.isLoginMode;
-    console.log('Toggled: isLoginMode = ', this.isLoginMode); // Debugging log
+    console.log('Toggled: isLoginMode = ', this.isLoginMode);
   }
-  
+
 }

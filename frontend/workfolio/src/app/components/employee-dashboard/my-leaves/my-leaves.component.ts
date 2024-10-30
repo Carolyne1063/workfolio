@@ -34,7 +34,7 @@ export class MyLeavesComponent {
 
     if (fromDate && toDate && fromDate <= toDate) {
       const timeDiff = Math.abs(toDate.getTime() - fromDate.getTime());
-      const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24)) + 1; // including both start and end days
+      const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24)) + 1; 
       this.leaveForm.patchValue({ noOfDays: daysDiff });
     } else {
       this.leaveForm.patchValue({ noOfDays: '' });
@@ -45,8 +45,8 @@ export class MyLeavesComponent {
     if (this.leaveForm.valid) {
       const leaveData = this.leaveForm.value;
       console.log('Leave Application Submitted:', leaveData);
-      // Logic to process the leave application
-      this.toggleForm(); // Close the form after submission
+      
+      this.toggleForm(); 
     }
   }
 }

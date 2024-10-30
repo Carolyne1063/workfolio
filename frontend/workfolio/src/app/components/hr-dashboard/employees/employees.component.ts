@@ -13,16 +13,15 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./employees.component.css'],
 })
 export class EmployeesComponent {
-  showForm = false; 
+  showForm = false;
   selectedSection: string | undefined;
   visibleOptions: number | null = null;
 
-  // Search filters
+
   searchName = '';
   searchId = '';
   searchDesignation = '';
 
-  // Employee Data
   employees = [
     { id: 1, image: 'assets/p1.jpg', firstName: 'Alice', lastName: 'Johnson', position: 'Web Developer' },
     { id: 2, image: 'assets/p2.jpg', firstName: 'Bob', lastName: 'Smith', position: 'UI/UX Designer' },
@@ -73,18 +72,17 @@ export class EmployeesComponent {
 
 
   addEmployee() {
-    // Logic to add the new employee
+
     const newEmployee = { ...this.newEmployee, id: this.employees.length + 1, image: 'assets/default.jpg' };
     this.employees.push(newEmployee);
 
-    // Reset form and close overlay
+
     this.newEmployee = { firstName: '', lastName: '', email: '', phoneNumber: '', dateOfJoin: '', position: '' };
     this.showForm = false;
   }
 
   searchEmployees() {
-    // Implement filtering logic here
+
     console.log('Searching for:', this.searchName, this.searchId, this.searchDesignation);
-    // You can add logic to filter employees based on `searchName`, `searchId`, and `searchDesignation`.
   }
 }
