@@ -1,6 +1,43 @@
 <p>Dashboard / My Leaves</p>
 
-<button>Apply for Leave</button>
+<button (click)="toggleForm()">Apply for Leave</button>
+
+<div class="leave-application-overlay" *ngIf="showForm">
+  <div class="leave-application-form">
+    <button class="close-button" (click)="toggleForm()">✕</button>
+    <h2>Leave Application Form</h2>
+    <form [formGroup]="leaveForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="fromDate">From Date</label>
+        <input type="date" id="fromDate" formControlName="fromDate" (change)="calculateDays()" />
+      </div>
+
+      <div class="form-group">
+        <label for="toDate">To Date</label>
+        <input type="date" id="toDate" formControlName="toDate" (change)="calculateDays()" />
+      </div>
+
+      <div class="form-group">
+        <label for="noOfDays">Number of Days</label>
+        <input type="text" id="noOfDays" formControlName="noOfDays" readonly />
+      </div>
+
+      <div class="form-group">
+        <label for="leaveType">Leave Type</label>
+        <select id="leaveType" formControlName="leaveType">
+          <option *ngFor="let type of leaveTypes" [value]="type">{{ type }}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="reason">Reason</label>
+        <textarea id="reason" formControlName="reason" placeholder="Provide a reason for your leave..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-button">Submit Leave Application</button>
+    </form>
+  </div>
+</div>
 
 <table>
     <tr>
