@@ -1,37 +1,4 @@
-<p>Dashboard / Projects</p><br>
-
-    <button class="addProjectBtn" (click)="toggleFormVisibility()"><i class="fa-solid fa-square-plus"></i>Add Project</button>
-
-    <div *ngIf="isFormVisible" class="modal-overlay" (click)="toggleFormVisibility()">
-        <div class="project-form-container" (click)="$event.stopPropagation()">
-          <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
-            <div class="form-group">
-              <label for="title">Project Title</label>
-              <button class="close-button" (click)="toggleFormVisibility()">X</button>
-              <input id="title" formControlName="title" type="text" placeholder="Enter project title" />
-            </div>
-      
-            <div class="form-group">
-              <label for="description">Description</label>
-              <textarea id="description" formControlName="description" placeholder="Enter project description"></textarea>
-            </div>
-      
-            <div class="form-group">
-              <label for="deadline">Deadline</label>
-              <input id="deadline" formControlName="deadline" type="date" />
-            </div>
-      
-            <div class="form-group">
-              <label for="assignedTo">Assign To</label>
-              <select id="assignedTo" formControlName="assignedTo">
-                <option *ngFor="let person of assignablePeople" [value]="person">{{ person }}</option>
-              </select>
-            </div>
-      
-            <button type="submit" [disabled]="!projectForm.valid" class="submit-button">Add Project</button>
-          </form>
-        </div>
-      </div>
+<p>Dashboard / Employees/ View Projects</p><br>
 
 <div class="filter">
     <input type="text" value="Employee Name">
@@ -74,3 +41,4 @@
         <i id="status-pending" class="fa-solid fa-spinner"></i>
     </div>
 </div>
+

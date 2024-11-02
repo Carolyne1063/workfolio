@@ -1,1 +1,74 @@
-<p>employees works!</p>
+<p *ngIf="!selectedSection">Dashboard / Employees</p><br>
+
+
+<button *ngIf="selectedSection" class="backButton" (click)="goBack()"><i class="fa-solid fa-house"></i></button>
+
+<div *ngIf="showForm && !selectedSection" class="form-overlay">
+  <div class="form-container">
+    <div class="form-header">Add New Employee
+      <button class="close-button" (click)="toggleForm()">X</button>
+    </div>
+    <form id="add-employee-form" (ngSubmit)="addEmployee()">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" [(ngModel)]="newEmployee.firstName" name="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" [(ngModel)]="newEmployee.lastName" name="lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="newEmployee.email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="tel" id="phoneNumber" [(ngModel)]="newEmployee.phoneNumber" name="phoneNumber" required>
+      </div>
+      <div class="form-group">
+        <label for="dateOfJoin">Date of Join</label>
+        <input type="date" id="dateOfJoin" [(ngModel)]="newEmployee.dateOfJoin" name="dateOfJoin" required>
+      </div>
+      <div class="form-group">
+        <label for="position">Position</label>
+        <input type="text" id="position" [(ngModel)]="newEmployee.position" name="position" placeholder="e.g., Software Engineer" required>
+      </div>
+      <button type="submit" class="form-button">Add Employee</button>
+    </form>
+  </div>
+</div>
+
+<div class="filter" *ngIf="!selectedSection">
+  <input type="text" [(ngModel)]="searchName" placeholder="Employee Name">
+  <input type="text" [(ngModel)]="searchId" placeholder="Employee ID">
+  <input type="text" [(ngModel)]="searchDesignation" placeholder="Select Designation">
+  <button (click)="searchEmployees()">Search</button>
+</div>
+
+<div class="employeesContainer" *ngIf="!selectedSection">
+  <div class="employeeCard" *ngFor="let employee of employees">
+    <div class="details">
+      <img [src]="employee.image" alt="employeeImage">
+      <p class="employee-name">{{ employee.firstName }} {{ employee.lastName }}</p>
+      <p style="font-weight: bold; font-size: 20px;">{{ employee.position }}</p>
+    </div>
+    <div class="moreDetails">
+      <button (click)="toggleOptions(employee.id)">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+      </button>
+      <div *ngIf="isOptionsVisible(employee.id)" class="options-dropdown">
+        <ul>
+          <li (click)="onSelectSection('viewProfile')">View Profile</li>
+          <li (click)="onSelectSection('assignProject')">Assign Project</li>
+          <li (click)="onSelectSection('viewProjects')">View Projects</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Conditionally render components based on selected section -->
+<app-view-profile *ngIf="selectedSection === 'viewProfile'"></app-view-profile>
+<app-assign-project *ngIf="selectedSection === 'assignProject'"></app-assign-project>
+<app-view-projects *ngIf="selectedSection === 'viewProjects'"></app-view-projects>
+

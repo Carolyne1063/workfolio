@@ -1,1 +1,12 @@
-<p>project-manager works!</p>
+<main>
+    <app-navbar></app-navbar>
+    <div class="container">
+        <app-sidebar (selectSection)="onSectionSelected($event)"></app-sidebar>
+        <div class="content-container">
+            <app-dashboard *ngIf="selectedSection === 'dashboard'"></app-dashboard>
+            <app-projects *ngIf="selectedSection === 'projects'"></app-projects>
+            <app-employees *ngIf="selectedSection === 'employees'"></app-employees>
+        </div>
+    </div>
+</main>
+

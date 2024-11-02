@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+.navbar{
+    padding: 20px;
+    display: flex;
+    justify-content:space-between;
+    background-color: #FF6500;
+    color: white;
+}
+.logo > p{
+    font-size: 20px;
+    font-weight: 900;
+}
+.sideIcons{
+    display: flex;
+    gap: 20px;
+}
+.sideIcons > button{
+    background-color: white;
+    width: 50px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+}

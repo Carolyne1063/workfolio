@@ -1,1 +1,23 @@
-<p>sidebar works!</p>
+<div class="sidebar">
+    <p class="user-profile">
+        <i *ngIf="!userImage" class="fa-solid fa-user"></i>
+        <img *ngIf="userImage" [src]="userImage" alt="User Profile" class="user-image" />
+        {{ projectManager }}
+    </p>
+
+    <hr>
+    <hr>
+    <ul class="sidenav">
+        <br>
+        <li><i class="fa-solid fa-gauge"></i><a (click)="onSelectSection('dashboard')">Dashboard</a></li>
+        <br>
+        <hr>
+        <li><i class="fa-solid fa-rocket"></i><a (click)="onSelectSection('projects')">Projects</a></li>
+        <br>
+        <hr>
+        <li><i class="fa-solid fa-users"></i><a (click)="onSelectSection('employees')">Employees</a></li>
+        <br>
+        <hr>
+    </ul>
+    <p><i class="fa-solid fa-right-from-bracket"></i><a href="/landing"><span>Log Out</span></a></p>
+</div>

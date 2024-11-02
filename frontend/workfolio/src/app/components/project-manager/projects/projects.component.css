@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.addProjectBtn {
+    padding: 12px;
+    font-size: 12px;
+    font-weight: 300;
+    color: white;
+    background-color: #FF6500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 750px;
+}
+.addProjectBtn i{
+    padding-right: 7px;
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #FF6500;
+  }
+  
+  .close-button:hover {
+    color: #FF6500;
+  }
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .project-form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    z-index: 1001;
+    position: relative;
+  }
+  
+ 
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    color: #FF6500;
+    margin-bottom: 5px;
+  }
+  
+  input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .submit-button {
+    background-color: #FF6500;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .submit-button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  
+.filter{
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.filter input{
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+
+}
+.filter button{
+    background-color: #73EC8B;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.projectsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 12px;
+}
+.projectCard{
+    width: 200px;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projectCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15); 
+}
+#status-completed{
+    font-size: 20px;
+    color: green;
+}
+#status-pending {
+    font-size: 20px;
+    color: red;
+}

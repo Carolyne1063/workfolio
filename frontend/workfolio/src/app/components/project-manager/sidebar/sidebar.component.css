@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: #1E1E1E;
+    color: white;
+    height: 100vh;
+    width: 20vw;
+}
+.user-profile{
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+}
+  .sidebar p{
+      font-size: 20px;
+      font-weight: bold;
+      padding: 30px;
+      margin-top: 20px;
+  }
+  
+  ul li{
+      list-style-type: none;
+      padding: 10px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+  }
+  .sidebar i{
+    padding-right: 15px;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  

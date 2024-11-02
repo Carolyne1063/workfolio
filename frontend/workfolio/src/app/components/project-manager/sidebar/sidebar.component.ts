@@ -1,12 +1,19 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
-
+  @Output() selectSection = new EventEmitter<string>();
+  userImage?: string; 
+  projectManager: string = 'Project Manager'; 
+  
+  onSelectSection(section: string) {
+    this.selectSection.emit(section);
+  }
 }
