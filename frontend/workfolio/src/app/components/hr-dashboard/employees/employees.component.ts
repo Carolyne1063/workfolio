@@ -1,14 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { ViewProfileComponent } from './view-profile/view-profile.component';
-import { ViewProjectsComponent } from './view-projects/view-projects.component';
-import { AssignProjectComponent } from './assign-project/assign-project.component';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-employees',
   standalone: true,
-  imports: [CommonModule, FormsModule, ViewProfileComponent, ViewProjectsComponent, AssignProjectComponent],
+  imports: [CommonModule, FormsModule, ViewProfileComponent],
   templateUrl: './employees.component.html',
   styleUrls: ['./employees.component.css'],
 })

@@ -3,41 +3,6 @@
 
 <button *ngIf="selectedSection" class="backButton" (click)="goBack()"><i class="fa-solid fa-house"></i></button>
 
-<div *ngIf="showForm && !selectedSection" class="form-overlay">
-  <div class="form-container">
-    <div class="form-header">Add New Employee
-      <button class="close-button" (click)="toggleForm()">X</button>
-    </div>
-    <form id="add-employee-form" (ngSubmit)="addEmployee()">
-      <div class="form-group">
-        <label for="firstName">First Name</label>
-        <input type="text" id="firstName" [(ngModel)]="newEmployee.firstName" name="firstName" required>
-      </div>
-      <div class="form-group">
-        <label for="lastName">Last Name</label>
-        <input type="text" id="lastName" [(ngModel)]="newEmployee.lastName" name="lastName" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" [(ngModel)]="newEmployee.email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="phoneNumber">Phone Number</label>
-        <input type="tel" id="phoneNumber" [(ngModel)]="newEmployee.phoneNumber" name="phoneNumber" required>
-      </div>
-      <div class="form-group">
-        <label for="dateOfJoin">Date of Join</label>
-        <input type="date" id="dateOfJoin" [(ngModel)]="newEmployee.dateOfJoin" name="dateOfJoin" required>
-      </div>
-      <div class="form-group">
-        <label for="position">Position</label>
-        <input type="text" id="position" [(ngModel)]="newEmployee.position" name="position" placeholder="e.g., Software Engineer" required>
-      </div>
-      <button type="submit" class="form-button">Add Employee</button>
-    </form>
-  </div>
-</div>
-
 <div class="filter" *ngIf="!selectedSection">
   <input type="text" [(ngModel)]="searchName" placeholder="Employee Name">
   <input type="text" [(ngModel)]="searchId" placeholder="Employee ID">

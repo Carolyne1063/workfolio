@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { ProjectsComponent } from './projects/projects.component';
 import { LeaveManagementComponent } from './leave-management/leave-management.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { LeadersComponent } from './leaders/leaders.component';
@@ -12,7 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 @Component({
   selector: 'app-hr-dashboard',
   standalone: true,
-  imports: [CommonModule, NavbarComponent, SidebarComponent, ProjectsComponent, LeaveManagementComponent, EmployeesComponent, LeadersComponent, AttendanceComponent, DashboardComponent],
+  imports: [CommonModule, NavbarComponent, SidebarComponent, LeaveManagementComponent, EmployeesComponent, LeadersComponent, AttendanceComponent, DashboardComponent],
   templateUrl: './hr-dashboard.component.html',
   styleUrl: './hr-dashboard.component.css'
 })

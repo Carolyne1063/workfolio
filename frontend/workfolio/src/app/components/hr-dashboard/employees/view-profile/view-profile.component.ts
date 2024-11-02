@@ -50,6 +50,7 @@ export class ViewProfileComponent {
     emergencyContacts: false,
     employmentDetails: false
   };
+  employeeId: any;
 
   toggleEdit(section: keyof typeof this.isEditing) {
     this.isEditing[section] = !this.isEditing[section];
@@ -67,4 +68,39 @@ export class ViewProfileComponent {
   anyEditing(): boolean {
     return Object.values(this.isEditing).some(editing => editing);
   }
+   // Dropdown options for organizations and statuses
+   organizations: string[] = ['Finance', 'Marketing', 'IT', 'Human Resources', 'Operations'];
+   statuses: string[] = ['Active', 'Inactive', 'Terminated'];
+ 
+   // Selected values for organization and status
+   selectedOrganization: string = '';
+   employeeStatus: string = '';
+ 
+   // Method to assign the selected organization to the employee
+   assignOrganization() {
+     const organizationDetails = {
+       employeeId: this.employeeId,
+       organization: this.selectedOrganization
+     };
+ 
+     // Simulate a save operation (could be an API call)
+     console.log('Assigning organization:', organizationDetails);
+ 
+     // Optional: Add code to send organizationDetails to a backend API
+     alert(`Organization assigned: ${this.selectedOrganization}`);
+   }
+ 
+   // Method to update the employee's status
+   updateStatus() {
+     const statusDetails = {
+       employeeId: this.employeeId,
+       status: this.employeeStatus
+     };
+ 
+     // Simulate a save operation (could be an API call)
+     console.log('Updating status:', statusDetails);
+ 
+     // Optional: Add code to send statusDetails to a backend API
+     alert(`Status updated to: ${this.employeeStatus}`);
+   }
 }

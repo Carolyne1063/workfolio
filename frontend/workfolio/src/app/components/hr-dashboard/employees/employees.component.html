@@ -63,8 +63,6 @@
       <div *ngIf="isOptionsVisible(employee.id)" class="options-dropdown">
         <ul>
           <li (click)="onSelectSection('viewProfile')">View Profile</li>
-          <li (click)="onSelectSection('assignProject')">Assign Project</li>
-          <li (click)="onSelectSection('viewProjects')">View Projects</li>
         </ul>
       </div>
     </div>
@@ -73,5 +71,4 @@
 
 <!-- Conditionally render components based on selected section -->
 <app-view-profile *ngIf="selectedSection === 'viewProfile'"></app-view-profile>
-<app-assign-project *ngIf="selectedSection === 'assignProject'"></app-assign-project>
-<app-view-projects *ngIf="selectedSection === 'viewProjects'"></app-view-projects>
+
