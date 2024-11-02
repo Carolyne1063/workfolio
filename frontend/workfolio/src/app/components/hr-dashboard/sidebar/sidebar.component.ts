@@ -11,7 +11,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class SidebarComponent {
   @Output() selectSection = new EventEmitter<string>();
   userImage?: string; 
-  userName: string = 'UserName'; 
+  userName: string = 'HR'; 
   
   onSelectSection(section: string) {
     this.selectSection.emit(section);
